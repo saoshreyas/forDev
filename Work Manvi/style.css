@@ -143,7 +143,30 @@ input {
 		z-index: 5;
 	}
 }
+.password-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 
+.password-input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px; /* Space for eye icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px; /* Places the eye icon inside the input */
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
 .overlay-container {
 	position: absolute;
 	top: 0;
