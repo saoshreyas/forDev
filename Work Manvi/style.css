@@ -143,7 +143,7 @@ input {
 		z-index: 5;
 	}
 }
-.password-container {
+/* .password-container {
     position: relative;
     width: 100%;
     display: flex;
@@ -153,7 +153,7 @@ input {
 .password-input {
     width: 100%;
     padding: 12px;
-    padding-right: 40px; /* Space for eye icon */
+    padding-right: 40px; 
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -162,11 +162,49 @@ input {
 
 .eye-icon {
     position: absolute;
-    right: 10px; /* Places the eye icon inside the input */
+    right: 10px;
     cursor: pointer;
     font-size: 18px;
     color: #555;
-}
+} */
+
+.password-container {
+	position: relative;
+	width: 283px;
+
+  }
+  
+  #password {
+	width: 100%;
+	padding: 12px 40px 12px 16px;
+	border: 1px solid #dfe1e5;
+	border-radius: 8px;
+	font-size: 16px;
+  }
+  
+  .eye-toggle {
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+  }
+  
+  .eye-icon {
+	width: 20px;
+	height: 20px;
+	transition: opacity 0.2s;
+  }
+  .password:focus {
+	outline: none;
+	border-color: #1a73e8;
+  }
+  .eye-toggle:hover .eye-icon {
+	opacity: 0.9;
+  }
 .overlay-container {
 	position: absolute;
 	top: 0;
@@ -201,7 +239,17 @@ input {
 .container.right-panel-active .overlay {
   	transform: translateX(50%);
 }
+.eye-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
 
+.eye-toggle img {
+    width: 36px; /* Adjust size */
+    height: 24px;
+}
 .overlay-panel {
 	position: absolute;
 	display: flex;
