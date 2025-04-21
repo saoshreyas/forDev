@@ -79,34 +79,34 @@ function togglePassword(button) {
   console.log("Found input:", input);
 }
 
-function handleInput(input) {
-  if (!isPasswordVisible) {
-    showBriefly(input);
-  }
-}
+// function handleInput(input) {
+//   if (!isPasswordVisible) {
+//     showBriefly(input);
+//   }
+// }
 
-function showBriefly(input) {
-  if (!input.dataset.realValue) {
-    input.dataset.realValue = "";
-  }
+// function showBriefly(input) {
+//   if (!input.dataset.realValue) {
+//     input.dataset.realValue = "";
+//   }
 
-  let storedValue = input.dataset.realValue;
-  let value = input.value;
+//   let storedValue = input.dataset.realValue;
+//   let value = input.value;
 
-  if (value.length < storedValue.length) {
-    storedValue = storedValue.slice(0, value.length); // Handle deletions
-  } else if (value.length > storedValue.length) {
-    storedValue += value[value.length - 1]; // Append new character
-  }
+//   if (value.length < storedValue.length) {
+//     storedValue = storedValue.slice(0, value.length); // Handle deletions
+//   } else if (value.length > storedValue.length) {
+//     storedValue += value[value.length - 1]; // Append new character
+//   }
 
-  input.dataset.realValue = storedValue;
-  input.type = "text";
-  input.value = storedValue.slice(0, -1).replace(/./g, "•") + storedValue.slice(-1);
+//   input.dataset.realValue = storedValue;
+//   input.type = "text";
+//   input.value = storedValue.slice(0, -1).replace(/./g, "•") + storedValue.slice(-1);
 
-  setTimeout(() => {
-    if (!isPasswordVisible) {
-      input.type = "password";
-      input.value = storedValue;
-    }
-  }, 250);
-}
+//   setTimeout(() => {
+//     if (!isPasswordVisible) {
+//       input.type = "password";
+//       input.value = storedValue;
+//     }
+//   }, 250);
+// }
